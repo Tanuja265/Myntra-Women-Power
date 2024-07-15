@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tips - Myntra Clone</title>
+    <link rel="stylesheet" href="mintra.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="mintra.html">
+                <img class="myntrahome" src="images/myntra_logo.webp" alt="Myntra Home">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="mintra.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="mintra.html">Kids</a>
+            <a href="mintra.html">Home & Living</a>
+            <a href="mintra.html">Beauty</a>
+            <a href="mintra.html">Studio <sup>New</sup></a>
+            <a href="tips.html">Tips<sup>New</sup></a>
+        </nav>
+        <div class="search-bar">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <input class="search-input" placeholder="Search for products">
+        </div>
+        <div class="acttion">
+            <div class="acttion-container">
+                <span class="material-symbols-outlined action-icon">person</span>
+                <span class="action-name">Profile</span>
+            </div>
+
+            <div class="acttion-container">
+                <span class="material-symbols-outlined action-icon">favorite</span>
+                <span class="action-name">Wishlist</span>
+            </div>
+
+            <div class="acttion-container">
+                <span class="material-symbols-outlined action-icon">shopping_bag</span>
+                <span class="action-name">Bag</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #de55cc;
+                margin: 0;
+                padding:0;
+                background: linear-gradient(135deg ,#71b7e6 ,#9b59b6)
+            }
+    
+            header {
+                background-color: #ffffff;
+                padding: 10px 20px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            .navbar {
+                display: flex;
+                gap: 20px;
+            }
+    
+            .search-bar {
+                display: flex;
+                align-items: center;
+            }
+    
+            .search-input {
+                padding: 10px;
+                margin-left: 10px;
+                border-color:#9b59b6;
+            }
+    
+            .acttion {
+                display: flex;
+                gap: 20px;
+            }
+    
+            .acttion-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: calc(100vh - 150px); /* Adjust based on header height */
+                padding: 20px;
+                margin-top: 20px;
+            }
+    
+            .form-container {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                width: 70%;
+                max-width: 800px;
+                border: bottom width 2px;
+            }
+    
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 24px;
+                color: #333;
+                font-style: italic;
+                font-display:var(#000000);
+                white-space: nowrap; /* Ensure the text stays on one line */
+                overflow: hidden; /* Hide any overflow if the text is too long */
+                text-overflow: ellipsis; /* Add ellipsis if text overflows */
+            }
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 20px;
+                color: #333;
+                
+            }
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: #010101;
+                font-size: medium;
+                font-style: italic;
+            }
+            select {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 16px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                background-color: #fff;
+            }
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: #ef3aa3;
+                border: rgb(8, 8, 8);
+                border-radius: 4px;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                flex-wrap: wrap; /* Allows the items to wrap to the next line */
+            }
+
+            .form-row label, .form-row select {
+                flex: 1;
+            }
+        </style>
+        <script>
+            function submitForm() {
+                const Category = document.getElementById('Category').value;
+                const Height = document.getElementById('Height').value;
+                const Specifications = document.getElementById('Specifications').value;
+                const Skin_Tone = document.getElementById('Skin_Tone').value;
+
+                const url = `finalsuggestionpage.html?Category=${encodeURIComponent(Category)}&Height=${encodeURIComponent(Height)}&Specifications=${encodeURIComponent(Specifications)}&Skin_Tone=${encodeURIComponent(Skin_Tone)}`;
+
+                window.location.href = url;
+            }
+        </script>
+        <div class="form-container">
+            <form onsubmit="submitForm(); return false;">
+                <h1><b>"Unlock Your Best Look: Expert Tips for a Beautiful You"</b></h1>
+                <div class="form-row">
+                    <label for="Category"><b>Category</b></label>
+                    <select id="Category" name="Category">
+                        <option value="">select</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Beauty">Beauty</option>
+                        <option value="Accessories">Accessories</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="Height"><b>Height</b></label>
+                    <select id="Height" name="Height">
+                        <option value="">select</option>
+                        <option value="Below_5">Below 5'</option>
+                        <option value="5_0_to_5_4">5'0" to 5'4"</option>
+                        <option value="5_5_to_5_9">5'5" to 5'9"</option>
+                        <option value="5_10_to_6_2">5'10" to 6'2"</option>
+                        <option value="Above_6_2">Above 6'2"</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="Specifications"><b>Specifications</b></label>
+                    <select id="Specifications" name="Specifications">
+                        <option value="">select</option>
+                        <option value="Skinny">Skinny</option>
+                        <option value="Slim">Slim</option>
+                        <option value="Relaxed">Relaxed</option>
+                        <option value="Chubby">Chubby</option>
+                        <option value="Over-sized">Over-sized</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="Skin_Tone"><b>Skin Tone</b></label>
+                    <select id="Skin_Tone" name="Skin_Tone">
+                        <option value="">select</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Medium_Light">Medium-Light</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Tan">Tan</option>
+                        <option value="Dark">Dark</option>
+                        <option value="Very_Dark">Very Dark</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick= "document.location='finalsugessionpage.html'" type="submit" onsubmit="submitForm">Search</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

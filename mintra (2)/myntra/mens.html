@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tips - Myntra Clone</title>
+    <link rel="stylesheet" href="mintra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="mintra.html">
+                <img class="myntrahome" src="images/myntra_logo.webp" alt="Myntra Home">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="mens.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="mintra.html">Kids</a>
+            <a href="mintra.html">Home & Living</a>
+            <a href="mintra.html">Beauty</a>
+            <a href="mintra.html">Studio <sup>New</sup></a>
+            <a href="tips.html">Tips </a> <!-- Linking to the new page -->
+        </nav>
+        <div class="search-bar">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <input class="search-input" placeholder="Search for products">
+        </div>
+        <div class="acttion">
+            <div class="acttion-container">
+                <span class="material-symbols-outlined action-icon">person</span>
+                <span class="action-name">Profile</span>
+            </div>
+
+            <div class="acttion-container">
+                <span class="material-symbols-outlined action-icon">favorite</span>
+                <span class="action-name">Wishlist</span>
+            </div>
+
+            <div class="acttion-container">
+                <span class="material-symbols-outlined action-icon">shopping_bag</span>
+                <span class="action-name">Bag</span>
+            </div>
+        </div>
+    </header>
+    <style>
+        /* Basic styling for the product grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-item {
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .product-name {
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        .product-price {
+            font-size: 14px;
+            color: #666;
+        }
+        .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #dd5127;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="product-grid" class="container">
+        <!-- Product 1 -->
+        <div class="product-item">
+            <img class="product-image" src="Images/men/m1.jpg" alt="Product 1">
+            <div class="product-name"><b>Product 1</b> <button type="button" onclick= "document.location='camera.html'" type="submit" onsubmit="submitForm"><i style="font-size:24px" class="fa">&#xf030;</i></button></div>
+            <div class="product-price">$19.99<span class="rating-star">(3.8)</span><br></div>
+            <div class="rating">
+                <button class="button" style="vertical-align:middle"><span>Buy Now </span></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img class="product-image" src="Images/men/m2.jpg" alt="Product 1">
+            <div class="product-name"><b>Product 2</b> <button type="button" onclick= "document.location='camera.html'" type="submit" onsubmit="submitForm"><i style="font-size:24px" class="fa">&#xf030;</i></button></div>
+            <div class="product-price">$19.99<span class="rating-star">(3.8)</span><br></div>
+            <div class="rating">
+                <button class="button" style="vertical-align:middle"><span>Buy Now </span></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img class="product-image" src="Images/men/m3.jpg" alt="Product 1">
+            <div class="product-name"><b>Product 3</b> <button type="button" onclick= "document.location='camera.html'" type="submit" onsubmit="submitForm"><i style="font-size:24px" class="fa">&#xf030;</i></button></div>
+            <div class="product-price">$19.99<span class="rating-star">(3.8)</span><br></div>
+            <div class="rating">
+                <button class="button" style="vertical-align:middle"><span>Buy Now </span></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img class="product-image" src="Images/men/m4.jpg" alt="Product 1">
+            <div class="product-name"><b>Product 4</b> <button type="button" onclick= "document.location='camera.html'" type="submit" onsubmit="submitForm"><i style="font-size:24px" class="fa">&#xf030;</i></button></div>
+            <div class="product-price">$19.99<span class="rating-star">(3.8)</span><br></div>
+            <div class="rating">
+                <button class="button" style="vertical-align:middle"><span>Buy Now </span></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img class="product-image" src="Images/men/m5.jpg" alt="Product 1">
+            <div class="product-name"><b>Product 5</b> <button type="button" onclick= "document.location='camera.html'" type="submit" onsubmit="submitForm"><i style="font-size:24px" class="fa">&#xf030;</i></button></div>
+            <div class="product-price">$19.99<span class="rating-star">(3.8)</span><br></div>
+            <div class="rating">
+                <button class="button" style="vertical-align:middle"><span>Buy Now </span></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img class="product-image" src="Images/men/m6.jpeg" alt="Product 1">
+            <div class="product-name"><b>Product 6</b> <button type="button" onclick= "document.location='camera.html'" type="submit" onsubmit="submitForm"><i style="font-size:24px" class="fa">&#xf030;</i></button></div>
+            <div class="product-price">$19.99<span class="rating-star">(3.8)</span><br></div>
+            <div class="rating">
+                <button class="button" style="vertical-align:middle"><span>Buy Now </span></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img class="product-image" src="Images/men/m7.jpeg" alt="Product 1">
+            <div class="product-name"><b>Product 7</b> <button type="button" onclick= "document.location='camera.html'" type="submit" onsubmit="submitForm"><i style="font-size:24px" class="fa">&#xf030;</i></button></div>
+            <div class="product-price">$19.99<span class="rating-star">(3.8)</span><br></div>
+            <div class="rating">
+                <button class="button" style="vertical-align:middle"><span>Buy Now </span></button>
+            </div>
+        </div>
+        <!-- Product 12 -->
+            <div class="product-item">
+                <img class="product-image" src="Images/men/m8.jpg" alt="Product 12">
+                <div class="product-name"><b>Product 8</b> <button type="button" onclick= "document.location='camera.html'" type="submit" onsubmit="submitForm"><i style="font-size:24px" class="fa">&#xf030;</i></button></div>
+            <div class="product-price">$19.99<span class="rating-star">(3.8)</span><br></div>
+            <div class="rating">
+                <button class="button" style="vertical-align:middle"><span>Buy Now </span></button>
+            </div>
+        </div>
+    </div>
+    <div class="heading">MEDAL WORTHY <span>BRANDS </span>TO BAG</div>
+    <div class="category-items">
+        <a href="#"><img class="sale-item" src="images/offers/1.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/2.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/3.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/4.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/5.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/6.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/7.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/8.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/9.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/10.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/11.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/12.png"></a>
+        <a href="#"><img class="sale-item" src="images/offers/4.png"></a>
+    </div>
+
+    <div class="heading"><span>SHOP</span> BY CATEGORY</div>
+    
+    <div class="category-items">
+        <a href="#"><img class="sale-item" src="images/categories/1.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/2.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/3.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/4.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/5.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/6.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/7.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/8.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/9.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/10.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/4.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/5.jpg"></a>
+        <a href="#"><img class="sale-item" src="images/categories/6.jpg"></a>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>ONLINE SHOPPING</h3>
+
+                <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+            
+            </div>
+
+            <div class="footer-column">
+                <h3>ONLINE SHOPPING</h3>
+
+                <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+                
+            </div>
+
+            <div class="footer-column">
+                <h3>ONLINE SHOPPING</h3>
+
+                   <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+             
+            </div>
+        </div>
+        <hr>
+
+        <div class="copyright">
+            © 2023 www.myntra.com. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Final Suggestions - Myntra Clone</title>
+    <link rel="stylesheet" href="mintra.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="mintra.html">
+                <img class="myntrahome" src="images/myntra_logo.webp" alt="Myntra Home">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="mens.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="mintra.html">Kids</a>
+            <a href="mintra.html">Home & Living</a>
+            <a href="mintra.html">Beauty</a>
+            <a href="mintra.html">Studio <sup>New</sup></a>
+            <a href="tips.html">Tips<sup>New</sup></a>
+        </nav>
+        <div class="search-bar">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <input class="search-input" placeholder="Search for products">
+        </div>
+        <div class="acttion">
+            <div class="acttion-container">
+                <span class="material-symbols-outlined action-icon">person</span>
+                <span class="action-name">Profile</span>
+            </div>
+
+            <div class="acttion-container">
+                <span class="material-symbols-outlined action-icon">favorite</span>
+                <span class="action-name">Wishlist</span>
+            </div>
+
+            <div class="acttion-container">
+                <span class="material-symbols-outlined action-icon">shopping_bag</span>
+                <span class="action-name">Bag</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #de55cc;
+                margin: 0;
+                padding:0;
+                background: linear-gradient(135deg ,#71b7e6 ,#9b59b6)
+            }
+    
+            header {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+    
+            .navbar {
+                display: flex;
+                gap: 20px;
+            }
+    
+            .search-bar {
+                display: flex;
+                align-items: center;
+            }
+    
+            .search-input {
+                padding: 10px;
+                margin-left: 10px;
+                border-color:#9b59b6
+            }
+    
+            .acttion {
+                display: flex;
+                gap: 20px;
+            }
+    
+            .acttion-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: calc(100vh - 150px); /* Adjust based on header height */
+                padding: 20px;
+                margin-top: 20px;
+            }
+    
+            .form-container {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                width: 70%;
+                max-width: 800px;
+                border: bottom width 2px;
+            }
+    
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 24px;
+                color: #333;
+                font-style: italic;
+                font-display:var(#000000);
+                white-space: nowrap; /* Ensure the text stays on one line */
+                overflow: hidden; /* Hide any overflow if the text is too long */
+                text-overflow: ellipsis; /* Add ellipsis if text overflows */
+            }
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 20px;
+                color: #333;
+            }
+            .suggestions {
+                text-align: center;
+                font-size: 18px;
+                color: #333;
+            }
+            .image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+        </style>
+        <script>
+            function getQueryParams() {
+                const params = new URLSearchParams(window.location.search);
+                return {
+                    Category: params.get('Category'),
+                    Height: params.get('Height'),
+                    Specifications: params.get('Specifications'),
+                    Skin_Tone: params.get('Skin_Tone')
+                };
+            }
+
+            function displaySuggestions() {
+                const { Category, Height, Specifications, Skin_Tone } = getQueryParams();
+
+                const suggestionsContainer = document.getElementById('suggestions');
+                    suggestionsContainer.innerHTML = `
+                        <h2>Personalized Suggestions</h2>
+                        <p><b>Lipstick Shades:</b>
+
+                        <div class="image-row">
+            <div class="container" >
+                <img src="Images/tips/suggest/1.jpg" alt="Image 1" class="row-image" width="300" height="270">
+            <div class="overlay">Nude Lipstick</div>
+            </div>
+            <div class="container" >
+                <img src="Images/tips/suggest/2.jpg" alt="Image 2" class="row-image" width="300" height="270">
+            <div class="overlay">Soft Matte Lipstick</div>
+            </div>
+        </div>
+        <b>Foundations:</b>
+        <div class="image-row">
+            <div class="container" >
+                <img src="Images/tips/suggest/f1.jpg" alt="Image 1" class="row-image" width="300" height="270">
+            <div class="overlay">Double Wear Foundation</div>
+            </div>
+            <div class="container" >
+                <img src="Images/tips/suggest/f2.jpg" alt="Image 2" class="row-image" width="300" height="270">
+            <div class="overlay">Becca Foundation</div>
+            </div>
+        </div>
+<b>Additional Tips:</b><br>
+<b>Test Shades:</b> Always test foundation shades on your jawline to find the perfect match.<br>
+<b>Blend Well:</b> Ensure you blend the foundation well into your skin for a seamless finish.<br>
+<b>Complementary Blush:</b> Pair your foundation and lipstick with a blush that complements your skin tone, such as peachy or rose shades for medium skin tones.<br>
+Choose the best to enhance your beauty and achieve a look that makes you feel confident and fabulous!</p>
+                    `;
+
+            }
+
+            document.addEventListener('DOMContentLoaded', displaySuggestions);
+        </script>
+        <div class="form-container">
+            <div id="suggestions" class="suggestions"></div>
+        </div>
+    </main>
+</body>
+</html>

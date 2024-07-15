@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Button</title>
+    <style>
+        /* Basic styling for the button */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg ,#71b7e6 ,#9b59b6)
+        }
+        
+
+        #camera-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color:#9b59b6;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #camera-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button id="camera-button">Open Camera</button>
+
+    <script>
+        const cameraButton = document.getElementById('camera-button');
+
+        // Add a click event listener to the button
+        cameraButton.addEventListener('click', async () => {
+            try {
+                // Request access to the user's camera
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+
+                // Display the camera stream (you can customize this part)
+                const videoElement = document.createElement('video');
+                videoElement.srcObject = stream;
+                videoElement.autoplay = true;
+                document.body.appendChild(videoElement);
+            } catch (error) {
+                console.error('Error accessing camera:', error);
+            }
+        });
+    </script>
+</body>
+</html>
